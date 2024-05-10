@@ -55,3 +55,85 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+
+
+/*==================== FORM VALIDATION ====================*/
+/* Función cuando se envía el formulario */
+emailjs.init('WfoWJlZTFieRfi82v');
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("formulario-contacto").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        if (validarFormulario()) {
+            enviarCorreo();
+        }
+    });
+});
+
+function validarFormulario() {
+    var nombre = document.getElementById("nombre").value.trim();
+    var correo = document.getElementById("correo").value.trim();
+    var consulta = document.getElementById("consulta").value.trim();
+
+    if (!nombre || !correo || !consulta) {
+        mostrarMensajeError("Todos los campos son obligatorios");
+        return false;
+    }
+
+    var formatoCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formatoCorreo.test(correo)) {
+        mostrarMensajeError("Por favor, introduce un correo electrónico válido");
+        return false;
+    }
+
+    ocultarMensajes();
+    return true;
+}
+
+function enviarCorreo() {
+    emailjs.send("service_cczrp1m", "template_m4u51nf", {
+        nombre: document.getElementById("nombre").value,
+        correo: document.getElementById("correo").value,
+        consulta: document.getElementById("consulta").value
+    })
+    .then(function(response) {
+        console.log("Correo enviado con éxito, en breves nos pondremos en contacto!", response);
+        mostrarMensajeExito();
+        limpiarCampos();
+    }, function(error) {
+        console.log("Error al enviar el correo", error);
+        mostrarMensajeError("Ocurrió un error al enviar el correo. Por favor, inténtalo de nuevo más tarde.");
+        limpiarCampos();
+    });
+}
+
+function mostrarMensajeExito() {
+    var mensajeExito = document.getElementById("mensaje-exito");
+    mensajeExito.style.display = "block";
+    // Ocultar el mensaje de éxito después de 5 segundos
+    setTimeout(function() {
+        mensajeExito.style.display = "none";
+    }, 3000);
+}
+
+function mostrarMensajeError(mensaje) {
+    var mensajeError = document.getElementById("mensaje-error");
+    mensajeError.innerText = mensaje;
+    mensajeError.style.display = "block";
+    // Ocultar el mensaje de error después de 5 segundos
+    setTimeout(function() {
+        mensajeExito.style.display = "none";
+    }, 3000);
+}
+
+function ocultarMensajes() {
+    document.getElementById("mensaje-exito").style.display = "none";
+    document.getElementById("mensaje-error").style.display = "none";
+}
+
+function limpiarCampos() {
+    document.getElementById("nombre").value = "";
+    document.getElementById("correo").value = "";
+    document.getElementById("consulta").value = "";
+}
+

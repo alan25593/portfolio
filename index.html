@@ -217,17 +217,23 @@
             
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
-                <h2 class="section-title">Contacto</h2>
-            
-                <div class="contact__container >
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Nombre" class="contact__input">
-                        <input type="email" placeholder="Correo Electrónico" class="contact__input">
-                        <textarea placeholder="Mensaje" cols="30" rows="10" class="contact__input"></textarea>
+                <h2 class="section-title">Dejame tu consulta!</h2>
+
+                <div class="contact__container bd-grid">
+                    <form id="formulario-contacto" class="contact__form">
+                        <input type="text" id="nombre" placeholder="Name" class="contact__input">
+                        <input type="email" id="correo" placeholder="Correo" class="contact__input">
+                        <textarea id="consulta" placeholder="Mensaje" cols="0" rows="10" class="contact__input"></textarea>
                         <input type="submit" value="Enviar" class="contact__button button">
                     </form>
-                </div>
+                </div>             
+                
             </section>
+            <!-- Mensajes de éxito o error -->
+            <div id="mensaje-exito" style="display: none;" class="mensaje-exito">Correo enviado con éxito, en breves nos pondremos en contacto!</div>
+            <div id="mensaje-error" style="display: none;" class="mensaje-error">Ocurrió un error al enviar el correo. Por favor, inténtalo de nuevo más tarde.</div>
+
+            
             
         </main>
 
@@ -246,8 +252,10 @@
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
-
+        <!--===== EmailJS =====-->
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
     </body>
 </html>

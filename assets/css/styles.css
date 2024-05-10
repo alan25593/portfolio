@@ -363,7 +363,7 @@ img {
 
 /* ===== CONTACT =====*/
 .contact__input {
-  width: 50%;
+  width: 100%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
   padding: 1rem;
@@ -371,7 +371,6 @@ img {
   border: 1.5px solid var(--second-color);
   outline: none;
   margin-bottom: var(--mb-4);
-  margin-left: 25%;
 }
 .contact__button {
   display: block;
@@ -381,13 +380,51 @@ img {
   cursor: pointer;
   margin-left: auto;
 }
-
-
-.contact__form {
-  text-align: center; /* Centra los elementos en línea dentro del formulario */
-  max-width: 400px; /* O ajusta según sea necesario */
-  width: 100%; /* Ajusta el ancho del formulario */
+.contact__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
+
+
+.mensaje-exito {
+  background-color: #2ecc71; /* Verde oscuro */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 80%; /* Ancho del mensaje */
+  max-width: 400px; /* Ancho máximo del mensaje */
+  text-align: center; /* Centrar texto horizontalmente */
+  color: #fff; /* Texto blanco */
+  display: flex; /* Utilizar flexbox */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+.mensaje-error {
+  background-color: #e74c3c; /* Rojo oscuro */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 80%; /* Ancho del mensaje */
+  max-width: 400px; /* Ancho máximo del mensaje */
+  text-align: center; /* Centrar texto horizontalmente */
+  color: #fff; /* Texto blanco */
+  display: flex; /* Utilizar flexbox */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+
 
 
 /* ===== FOOTER =====*/
