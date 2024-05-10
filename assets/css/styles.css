@@ -123,18 +123,7 @@ img {
   align-items: center;
   font-weight: var(--font-semi);
 }
-@media screen and (max-width: 767px) {
-  .nav__menu {
-    position: fixed;
-    top: var(--header-height);
-    right: -100%;
-    width: 80%;
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--second-color);
-    transition: 0.5s;
-  }
-}
+
 .nav__item {
   margin-bottom: var(--mb-4);
 }
@@ -181,10 +170,17 @@ img {
 
 /*===== HOME =====*/
 .home {
-  position: relative;
-  row-gap: 5rem;
-  padding: 4rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+.home__img {
+  margin-bottom: 20px; /* Ajusta el valor según sea necesario */
+}
+
 .home__data {
   align-self: center;
 }
@@ -208,12 +204,7 @@ img {
 .home__social-icon:hover {
   color: var(--first-color);
 }
-.home__img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 260px;
-}
+
 .home__blob {
   fill: var(--first-color);
 }
@@ -501,6 +492,20 @@ img {
     justify-items: center;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--second-color);
+    transition: 0.5s;
+  }
+}
+
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
@@ -532,13 +537,22 @@ img {
   }
   .nav__link {
     color: var(--second-color);
-  }
+  } 
   .home {
     padding: 8rem 0 2rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+  }
+  .home__data {
+    order: -1;
+    text-align: left;
   }
   .home__img {
     width: 400px;
     bottom: 10%;
+    margin-bottom: 0;
   }
   .about__container {
     padding-top: 2rem;
@@ -552,10 +566,12 @@ img {
     align-items: center;
     text-align: initial;
   }
+
   .work__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
+  
 }
 @media screen and (min-width: 992px) {
   .bd-grid {
@@ -568,4 +584,14 @@ img {
   .home__img {
     width: 450px;
   }
+}
+
+@media  (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 2rem;
+    align-items: center;
+    text-align: initial;
+  }
+
 }
