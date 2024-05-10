@@ -493,18 +493,7 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .nav__menu {
-    position: fixed;
-    top: var(--header-height);
-    right: -100%;
-    width: 80%;
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--second-color);
-    transition: 0.5s;
-  }
-}
+
 
 @media screen and (min-width: 768px) {
   body {
@@ -593,5 +582,17 @@ img {
     align-items: center;
     text-align: initial;
   }
-
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--first-color);
+    transition: right 0.3s ease; /* Ajusta la duración y la función de transición */
+  }
+  .show {
+    right: 0;
+  }
 }
