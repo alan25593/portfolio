@@ -368,16 +368,10 @@ img {
 }
 
 /* ===== CERT =====*/
+
 .cert {
   padding: 40px 0;
   background-color: #fff;
-}
-
-.cert h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.5em;
-  font-weight: bold;
 }
 
 .cert-grid {
@@ -389,39 +383,26 @@ img {
 
 .cert-item {
   flex: 1;
-  min-width: 300px;
-  max-width: 350px;
+  min-width: 200px;
+  max-width: 250px;
   text-align: center;
-  border: 1px solid #ddd;
   padding: 20px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cert-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .cert-item img {
-  max-width: 50px;
+  max-width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cert-item h3 {
   font-size: 1.5em;
   font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.cert-item p {
-  font-size: 1em;
-  color: #666;
-}
-
+  margin: 10px 0 0;
+  color: var(--second-color);
+} 
 
 
 /* ===== CONTACT =====*/
