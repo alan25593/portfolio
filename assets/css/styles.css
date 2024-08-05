@@ -379,7 +379,7 @@ img {
   justify-content: space-around;
   gap: 20px;
   flex-wrap: wrap;
-}
+}   
 
 .cert-item {
   flex: 1;
@@ -403,7 +403,6 @@ img {
   margin: 10px 0 0;
   color: var(--second-color);
 } 
-
 
 /* ===== CONTACT =====*/
 .contact__input {
