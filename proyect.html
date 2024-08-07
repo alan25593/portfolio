@@ -1,55 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Portafolio de Alan Lampert, DevOps Engineer con más de 4 años de experiencia en IT.">
-        <meta name="keywords" content="Alan Lampert, Portfolio Alan Lampert, Alan Lampert DevOps, DevOps Engineer, IT, AWS, Azure, Terraform, Docker, Kubernetes">
-        <link rel="stylesheet" href="assets/css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Alan Lampert, DevOps Engineer con más de 4 años de experiencia en IT.">
+    <meta name="keywords" content="Alan Lampert, Portfolio Alan Lampert, Alan Lampert DevOps, DevOps Engineer, IT, AWS, Azure, Terraform, Docker, Kubernetes">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="icon" href="assets/img/icon.png" type="image/x-icon">
-        <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+    <!-- =====BOX ICONS===== -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="assets/img/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
 
-        <title>Portfolio Alan Lampert</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="index.html#" class="nav__logo "><\Inicio\></a>
-                </div>
+    <title>Portfolio Alan Lampert</title>
+</head>
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html#" class="nav__logo "><\Inicio\></a>
+            </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">                        
-                        <li class="nav__item"><a href="index.html#about" class="nav__link ">Sobre Mi</a></li>
-                        <li class="nav__item"><a href="index.html#cert" class="nav__link ">Certs</a></li>
-                        <li class="nav__item"><a href="index.html#skills" class="nav__link ">Skills</a></li>
-                        <li class="nav__item"><a href="index.html#work" class="nav__link " >Exp</a></li>
-                        <li class="nav__item"><a href="proyect.html" class="nav__link ">Proyects</a></li>
-                    </ul>
-                </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">                        
+                    <li class="nav__item"><a href="index.html#about" class="nav__link ">Sobre Mi</a></li>
+                    <li class="nav__item"><a href="index.html#cert" class="nav__link ">Certs</a></li>
+                    <li class="nav__item"><a href="index.html#skills" class="nav__link ">Skills</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link " >Exp</a></li>
+                    <li class="nav__item"><a href="proyect.html" class="nav__link ">Proyects</a></li>
+                </ul>
+            </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
     <main>
-
-            <!--===== Proyectos =====-->
-            <section class="proyect section" id="proyect">
-                <h2 class="section-title">Proyects</h2>
-                <div class="proyect__container bd-grid">
-                    
-                    
+        <!--===== Proyectos =====-->
+        <section class="proyect section" id="proyect">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="proyect__container bd-grid">
+                <!--===== Portafolio =====-->
+                <div class="proyect__item">
+                    <img src="assets/img/p1.jpg" alt="Proyecto Portafolio" class="proyect__img">
+                    <div class="proyect__details">
+                        <h3 class="proyect__title">Portafolio</h3>
+                        <p class="proyect__description">Describe mi carrera profesional. (Incluye tecnologías y objetivos).</p>
+                        <a href="https://info.lampert-a.com" target="_blank" class="button">Ver Más</a>
+                    </div>
                 </div>
-                
+                <!--===== Nehros =====-->
+                <div class="proyect__item">
+                    <img src="assets/img/p2.jpg" alt="Nehros" class="proyect__img">
+                    <div class="proyect__details">
+                        <h3 class="proyect__title">Nehros - Consultora</h3>
+                        <p class="proyect__description">Junto a dos colegas creamos una consultora It freelance, en la cual tenemos más de 10 proyectos.</p>
+                        <a href="https://nehros.com" target="_blank" class="button">Ver Más</a>
+                    </div>
+                </div>
+                <!--===== QR =====-->
+                <div class="proyect__item">
+                    <img src="assets/img/p3.jpg" alt="Nehros" class="proyect__img">
+                    <div class="proyect__details">
+                        <h3 class="proyect__title">Proximamente más proyectos</h3>
+                        <p class="proyect__description">En construcción.</p>
+                        <a href="#" target="_blank" class="button">Ver Más</a>
+                    </div>
+                </div>
 
-                
-            </section>
+            </div>
+            <div class="proyect__contact">
+                <a href="index.html#contact" class="button">Contacto</a>
+            </div>
+            
+        </section>
+        
     </main>
 
     <!--===== FOOTER =====-->
@@ -59,11 +86,10 @@
             <a href="https://www.facebook.com/alan.lampert" target="_blank" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
             <a href="https://www.instagram.com/alan.lampert/" target="_blank" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
             <a href="https://www.linkedin.com/in/alan-lampert-792643164/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
-            <a href="https://wwwgithub.com/alan25593" target="_blank" class="footer__icon"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.github.com/alan25593" target="_blank" class="footer__icon"><i class='bx bxl-github' ></i></a>
         </div>
         <p class="footer__copy">&#169;All rigths reserved</p>
     </footer>
-
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
